@@ -91,8 +91,8 @@ if(form_addproducts){
     let arr = JSON.parse(localStorage.getItem("prod")) || [];
     arr.push({image,name,price,group});
     localStorage.setItem("prod",JSON.stringify(arr));
-    display();
   });
+    display();
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 });
+
 
 
 
