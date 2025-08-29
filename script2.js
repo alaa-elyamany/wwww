@@ -1,6 +1,6 @@
 //array of object of products
 
-var product=[
+var product = [
     {image:"blouse1.png",name:"Apple Green Blouse",price:"450L.E",group:"tops"},
     {image:"blouse2.png",name:"Mint-Green Blouse",price:"400L.E",group:"tops"},
     {image:"blouse3.png",name:"Baby Blue Blouse",price:"450L.E",group:"tops"},
@@ -29,166 +29,132 @@ var product=[
     {image:"heels1.webp",name:"Black Heels",price:"350L.E",group:"access"},
     {image:"heels2.png",name:"Coffee Heels",price:"300L.E",group:"access"},
     {image:"sport1.jpg",name:"White Sports",price:"300L.E",group:"access"},
-]
-product=JSON.parse(localStorage.getItem("prod"))
-localStorage.setItem("prod",JSON.stringify(product))
+];
 
+if(!localStorage.getItem("prod")){
+  localStorage.setItem("prod",JSON.stringify(product));
+}
 
-
-
-
-//sweetalert of logout button
-var logout_button=document.getElementById("logout_button")
+var logout_button=document.getElementById("logout_button");
+if(logout_button){
 logout_button.addEventListener("click",function(){
-Swal.fire({
-  title: "Are you sure?",
-  text: "You will exit the website",
-  icon: "question",
-  showCancelButton: true,
-  confirmButtonColor: "rgb(244, 142, 246)",
-  cancelButtonColor: "rgba(247, 213, 126, 1)",
-  confirmButtonText: "Yes, exit!"
-}).then((result) => {
-  if (result.isConfirmed) {
-    Swal.fire({
-      title: "Exit!",
-      text: "You have exited.",
-      icon: "success"
-    });
-    location.href="index.html"
-  }
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You will exit the website",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "rgb(244, 142, 246)",
+    cancelButtonColor: "rgba(247, 213, 126, 1)",
+    confirmButtonText: "Yes, exit!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Exit!",
+        text: "You have exited.",
+        icon: "success"
+      });
+      location.href="index.html";
+    }
+  });
 });
-
-})
-
-document.addEventListener("DOMContentLoaded",()=>{
-const path=window.location.pathname.toLowerCase();
-if(path.includes("/product.html")){
-display();
 }
-if(path.includes("/add_product.html")){
-  display();
-}
-})
 
+var container=document.getElementById("product_container");
 
-//Cards products (product page)
-
-var container=document.getElementById("product_container")
 function display(){
-let arr=JSON.parse(localStorage.getItem("prod"||[]))
-if(container){
-container.innerHTML="";
-for(let i=0;i<arr.length;i++){
-let products=arr[i]
-  container.innerHTML+=`<div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 pt-5 ">
-  <div class="card shadow " style="width: 18rem; ">
-  <div class="zoom"><img src="${products.image}" class="card-img-top" alt="..." ></div>
-  <div class="card-body text-start " >
-  <h5 class="card-title "> ${products.name}</h5>
-  <p class="card-text">Price: ${products.price}</p>
-  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
-  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
-  </div>
-  </div>
-  </div>`
-} 
-} 
-} display()
-
-var form_addproducts=document.getElementById("form_add")
-if(form_addproducts){
-form_addproducts.addEventListener ("submit",function(e){
-e.preventDefault();
-let image=document.getElementById("image").value
-let name=document.getElementById("productName").value
-let price=document.getElementById("productPrice").value
-let group=document.getElementById("productGroup").value
-product=JSON.parse(localStorage.getItem("prod"||[]))
-console.log(product);
-
-product.push({image,name,price,group});
-console.log(product);
-localStorage.setItem("prod",JSON.stringify(product))
-
-})
-}
-display()
-
-
-
-//The button of Add to cart and Remove
-let cartcounter=JSON.parse(localStorage.getItem("count"))||0
- cartcounter = document.getElementById("counter"); 
-localStorage.setItem("count",cartcounter)
-
-
-document.addEventListener("DOMContentLoaded", function(){ 
-  let cartnum = parseInt(localStorage.getItem("cartcounter")) || 0;
-   cartcounter.textContent = cartnum; 
-   document.querySelectorAll(".card").forEach(card => 
-    { let added = false;
-       let addBtn = card.querySelector("#button_add"); 
-      let removeBtn = card.querySelector("#button_remove"); 
-      addBtn.addEventListener("click", function(){
-Swal.fire({
- 
-  text: "You will add it to the card!",
-  icon: "question",
-  showCancelButton: true,
-  confirmButtonColor: "rgb(244, 142, 246)",
-  cancelButtonColor: "rgba(247, 213, 126, 1)",
-  confirmButtonText: "Yes, add it!"
-}).then((result) => {
-  if (result.isConfirmed) {
-    Swal.fire({
-      title: "Add",
-      text: "You add it successfully",
-      icon: "success"
+  let arr = JSON.parse(localStorage.getItem("prod")) || [];
+  if(container){
+    container.innerHTML="";
+    arr.forEach((products,i)=>{
+      container.innerHTML+=`
+        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 pt-5 ">
+          <div class="card shadow" style="width: 18rem;">
+            <div class="zoom"><img src="${products.image}" class="card-img-top" alt="${products.name}"></div>
+            <div class="card-body text-start">
+              <h5 class="card-title">${products.name}</h5>
+              <p class="card-text">Price: ${products.price}</p>
+              <a class="btn1 text-white rounded-pill button_add">Add to Cart</a>
+              <a class="btn2 text-white rounded-pill button_remove">Remove</a>
+            </div>
+          </div>
+        </div>`;
     });
- if(!added){ 
-          cartnum++; 
-          cartcounter.textContent = cartnum;
-           localStorage.setItem("cartcounter", cartnum);
-            added = true; 
-          } 
   }
-});  
-        });
-         removeBtn.addEventListener("click", function(){
-Swal.fire({
-  text: "You will delete it from the cart!",
-  icon: "warning",
-  showCancelButton: true,
-  confirmButtonColor: "rgb(244, 142, 246)",
-  cancelButtonColor: "rgba(247, 213, 126, 1)",
-  confirmButtonText: "Yes, delete it!"
-}).then((result) => {
-
-if (result.isConfirmed) {
-    Swal.fire({
-      title: "Deleted!",
-      text: "Your delete it successfully.",
-      icon: "success"
-    });
-if(added && cartnum > 0){ 
-            cartnum--;
-             cartcounter.textContent = cartnum; 
-            localStorage.setItem("cartcounter", cartnum);
-             added = false;
-           } 
 }
-});
-          });
-         }); 
+
+var form_addproducts=document.getElementById("form_add");
+if(form_addproducts){
+  form_addproducts.addEventListener ("submit",function(e){
+    e.preventDefault();
+    let image=document.getElementById("image").value;
+    let name=document.getElementById("productName").value;
+    let price=document.getElementById("productPrice").value;
+    let group=document.getElementById("productGroup").value;
+    let arr = JSON.parse(localStorage.getItem("prod")) || [];
+    arr.push({image,name,price,group});
+    localStorage.setItem("prod",JSON.stringify(arr));
+    display();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  display();
+
+  let cartElement = document.getElementById("counter");
+  let cartnum = parseInt(localStorage.getItem("cartcounter")) || 0;
+  if(cartElement){ cartElement.textContent = cartnum; }
+
+  if(container){
+    container.querySelectorAll(".card").forEach(card=>{
+      let added = false;
+      let addBtn = card.querySelector(".button_add"); 
+      let removeBtn = card.querySelector(".button_remove"); 
+
+      addBtn.addEventListener("click", function(){
+        Swal.fire({
+          text: "You will add it to the cart!",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "rgb(244, 142, 246)",
+          cancelButtonColor: "rgba(247, 213, 126, 1)",
+          confirmButtonText: "Yes, add it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({ title:"Add", text:"You add it successfully", icon:"success"});
+            if(!added){ 
+              cartnum++; 
+              if(cartElement){ cartElement.textContent = cartnum; }
+              localStorage.setItem("cartcounter", cartnum);
+              added = true;
+            }
+          }
         });
+      });
 
+      removeBtn.addEventListener("click", function(){
+        Swal.fire({
+          text: "You will delete it from the cart!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "rgb(244, 142, 246)",
+          cancelButtonColor: "rgba(247, 213, 126, 1)",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({ title:"Deleted!", text:"You deleted it successfully.", icon:"success"});
+            if(added && cartnum > 0){ 
+              cartnum--;
+              if(cartElement){ cartElement.textContent = cartnum; }
+              localStorage.setItem("cartcounter", cartnum);
+              added = false;
+            }
+          }
+        });
+      });
 
-
-
-
-
-
+    });
+  }
+});
 
 
 
