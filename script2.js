@@ -31,32 +31,30 @@ var product = [
     {image:"sport1.jpg",name:"White Sports",price:"300L.E",group:"access"},
 ];
 
-if(!localStorage.getItem("prod")){
-  localStorage.setItem("prod",JSON.stringify(product));
-}
+localStorage.setItem("prod", JSON.stringify(product));
 
 var logout_button=document.getElementById("logout_button");
 if(logout_button){
-logout_button.addEventListener("click",function(){
-  Swal.fire({
-    title: "Are you sure?",
-    text: "You will exit the website",
-    icon: "question",
-    showCancelButton: true,
-    confirmButtonColor: "rgb(244, 142, 246)",
-    cancelButtonColor: "rgba(247, 213, 126, 1)",
-    confirmButtonText: "Yes, exit!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "Exit!",
-        text: "You have exited.",
-        icon: "success"
-      });
-      location.href="index.html";
-    }
+  logout_button.addEventListener("click",function(){
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You will exit the website",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "rgb(244, 142, 246)",
+      cancelButtonColor: "rgba(247, 213, 126, 1)",
+      confirmButtonText: "Yes, exit!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Exit!",
+          text: "You have exited.",
+          icon: "success"
+        });
+        location.href="index.html";
+      }
+    });
   });
-});
 }
 
 var container=document.getElementById("product_container");
