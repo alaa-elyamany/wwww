@@ -30,7 +30,7 @@ var product = [
     {image:"heels2.png",name:"Coffee Heels",price:"300L.E",group:"access"},
     {image:"sport1.jpg",name:"White Sports",price:"300L.E",group:"access"},
 ];
-
+JSON.parse(localStorage.getItem("prod"))
 localStorage.setItem("prod", JSON.stringify(product));
 
 var logout_button=document.getElementById("logout_button");
@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 });
+
 
 
 
