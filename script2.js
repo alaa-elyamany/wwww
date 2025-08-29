@@ -73,8 +73,8 @@ function display(){
             <div class="card-body text-start">
               <h5 class="card-title">${products.name}</h5>
               <p class="card-text">Price: ${products.price}</p>
-              <a class="btn1 text-white rounded-pill button_add">Add to Cart</a>
-              <a class="btn2 text-white rounded-pill button_remove">Remove</a>
+              <a class="btn1 text-white rounded-pill button_add" style="text-decoration:none">Add to Cart</a>
+              <a class="btn2 text-white rounded-pill button_remove" style="text-decoration:none">Remove</a>
             </div>
           </div>
         </div>`;
@@ -154,3 +154,4 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 });
+
