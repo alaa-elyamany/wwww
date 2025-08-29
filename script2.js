@@ -31,7 +31,9 @@ var product = [
     {image:"sport1.jpg",name:"White Sports",price:"300L.E",group:"access"},
 ];
 
-localStorage.setItem("prod", JSON.stringify(product));
+if(!localStorage.getItem("prod")){
+  localStorage.setItem("prod", JSON.stringify(product));
+}
 
 var logout_button=document.getElementById("logout_button");
 if(logout_button){
@@ -135,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function(){
           icon: "warning",
           showCancelButton: true,
           confirmButtonColor: "rgb(244, 142, 246)",
-          cancelButtonColor: "rgba(247, 213, 126, 1)",
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(){
               cartnum--;
               if(cartElement){ cartElement.textContent = cartnum; }
               localStorage.setItem("cartcounter", cartnum);
-              added = false;
+             added = false;
             }
           }
         });
