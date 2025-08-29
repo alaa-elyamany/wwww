@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Her Elegance</title>
+    <link href="login.html"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+<style>
+    html,
+    body {
+      position: relative;
+      height: 2500px;
+    }
+    .swiper {
+      width: 40%;
+      height: 10%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+     background :linear-gradient(to top,rgb(245, 206, 246),rgb(250, 243, 225));
+     
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+    }
+     </style> 
+<body>
+        <header>
+<nav class="navbar navbar-expand-lg bg-body-secondary ">
+  <div class="container-fluid ">
+    <h1 class="navbar-brand ms-5 fs-4 text" id="header_h1"><span id="brand">Her</span>✨Elegance</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto me-5 ">
+        <li class="nav-item position-relative">
+          <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="about.html">About us</a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="product.html">Products</a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="add_product.html">Add Products</a>
+        </li>
+      <li class="nav-item position-relative">
+          <a class="nav-link me-2" ><i class="fa fa-shopping-cart" aria-hidden="true"><span id="counter">0</span></i></a>
+        </li>
+    <button class="rounded-pill " id="logout_button" >Logout</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+    </header>
+    <main>
+      <section class="first">
+       <div class="row d-flex justify-content-around justify-content-center position-relative m-0">
+        <div class="firstone col-lg-7 col-md-5 col-sm-5 ps-md-3">
+<h1 class="mt-5 mb-4 fs-1 " ><span id="brand">Her</span>✨Elegance</h1>
+<p class="fs-4 " id="firstp"  style="width: 72%;">Her Elegance celebrates every woman’s unique beauty with timeless styles crafted to inspire confidence and grace.</p>
+<button  class="hero_button rounded-pill mt-3 mb-2 shadow" ><a href="product.html" style="text-decoration: none; color: rgb(247, 232, 194);" id="hero_a"  >Find Your Style <i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <div class="firsttwo col-lg-3 col-md-7 col-sm-3 " data-aos="fade-right" data-aos-duration="2000">
+  <img src="hero-removebg-preview.png" id="imagehero"/>
+</div>
+</div>
+      </section>
+<section class="second " style="z-index: -1;">
+  <h1 class="text-center pt-5 pb-3  m-0 second_h2">What's New💫</h1>
+  <P class="text-center" id="firstp" >We have a new collections to make you more Elegance</P>
+  <div class=" d-flex  justify-content-around rounded">
+    <div class="swiper mySwiper mb-5">
+    <div class="swiper-wrapper mt-4 " style="z-index: -1;">
+      <div class="swiper-slide"><img src="image1-removebg-preview.png" alt="not found"></div>
+      <div class="swiper-slide"><img src="image2-removebg-preview.png" alt="not found"></div>
+      <div class="swiper-slide"><img src="image9-removebg-preview.png" alt="not found"></div>
+      <div class="swiper-slide"><img src="image10-removebg-preview (1).png" alt="not found"></div>
+      <div class="swiper-slide"><img src="image11-removebg-preview.png" alt="not found"></div>
+      <div class="swiper-slide"><img src="image8-removebg-preview.png" alt="not found"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
+</section>
+<section class="fourth">
+<div class="container  ">
+  <h1 class="mb-3 text-center second_h2 pt-4">Best Sellers🌟</h1>
+  <div class="scroll-container pb-5">
+    <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="bag2.webp" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Haven Bag</h5>
+  <p class="card-text">Price: 400 LE</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="best dress.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Burgundy Dress</h5>
+  <p class="card-text">Price: 600 LE</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="blouse1.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Apple Green Blouse</h5>
+  <p class="card-text">Price: 450L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="heels2.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Coffee Heels</h5>
+  <p class="card-text">Price: 300L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+ <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="jeans3.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Charcoal-Black Jeans </h5>
+  <p class="card-text">Price: 400L.E </p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+   <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="mest bag.webp" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Black Bag</h5>
+  <p class="card-text">Price: 400 L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="skirt2.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Navy-Blue Skirt</h5>
+  <p class="card-text">Price: 450L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="best_dress.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Floral Dress</h5>
+  <p class="card-text">Price: 800 L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="best_dress1.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Floral-White Dress </h5>
+  <p class="card-text">Price: 750 L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="best_blouse.png" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Floral Blouse </h5>
+  <p class="card-text">Price: 400 LE</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="fourth">
+  <div class="container">
+  <h1 class="mb-3 text-center second_h2 pt-4">Special Discounts🌟</h1>
+  <div class="scroll-container pb-5">
+    <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="dicdress1.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Floral Sky Blue Dress</h5>
+  <p class="card-text lh-1"><del>Price: 750 L.E</del></p>
+  <p class="card-text lh-1">Price: 640L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="dicdress2.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Floral Mint Green Dress</h5>
+  <p class="card-text lh-1"><del>Price: 800 L.E</del></p>
+  <p class="card-text lh-1">Price: 680 L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="dicdress3.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Red Dress</h5>
+  <p class="card-text lh-1"><del>Price: 550L.E</del></p>
+  <p class="card-text lh-1">Price: 470L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+     <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="dicdress4.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Blue Dress</h5>
+  <p class="card-text lh-1"><del>Price: 900L.E</del></p>
+  <p class="card-text lh-1">Price: 765L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+ <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="dicjeans1.jpg"class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title ">Navy-Blue Jeans </h5>
+  <p class="card-text lh-1"><del>Price: 350L.E</del> </p>
+    <p class="card-text lh-1">Price: 300L.E </p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+   <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="disbag1.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Camel Color Bag</h5>
+  <p class="card-text lh-1">Price: 400 L.E</p>
+  <p class="card-text lh-1">Price: 340 L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  <div class="card shadow " style="width: 18rem; ">
+  <div class="zoom"><img src="disbag2.jpg" class="card-img-top" alt="..." ></div>
+  <div class="card-body text-start " >
+  <h5 class="card-title "> Haven Bag</h5>
+  <p class="card-text lh-1"><del>Price: 400L.E</del></p>
+  <p class="card-text lh-1">Price: 340L.E</p>
+  <a style="text-decoration: none" class="btn1 text-white rounded-pill" id="button_add">Add to Cart</a>
+  <a style="text-decoration: none " class="btn2 text-white rounded-pill" id="button_remove">Remove</a>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="first">
+  <h2 class="second_h2 text-center pt-5 pb-3">Our Customers' Reviews</h2>
+  <div class="  d-flex justify-content-around justify-content-center pb-5">
+<div id="carouselExampleDark" class="carousel carousel-dark slide col-lg-5 col-md-8 col-sm-6 three_div " data-bs-ride="carousel" style="border-radius: 20px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <div class=>
+          <p id="firstp">"The designs at Her Elegance are truly unique and stylish✨✨. I felt so special the moment I wore the dress.
+             The quality exceeded my expectations!"</p>
+        <div class="">
+          <img id="customers_images" src="customer1.jpg"/>
+          <p class="name">Sophia Martinez</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <div>
+        <p id="firstp">"Honestly the best online shopping experience I’ve had.
+           The prices are fair compared to the high quality and attention to detail in every design❤️❤️."</p>
+           <div>
+            <img id="customers_images" src="customer2.jpg"/>
+            <p class="name">Emily Roberts</p>
+           </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div>
+        <p id="firstp">"Her Elegance really lives up to its name💫. Every piece makes me feel confident and elegant on any occasion✨✨."</p>
+        <div>
+          <img id="customers_images" src="customer3.jpg"/>
+          <p class="name">Olivia King</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+</section>
+    </main>
+
+    <footer>
+<div class="container">
+  <div class="row">
+ <div class="col-lg-3 col-md-6 col-sm-12  pt-4 position-relative ">
+    <h3 class="text-white"><span id="brand">Her</span>✨Elegance</h3>
+    <p >Her Elegance celebrates every woman’s unique beauty with timeless styles crafted to inspire confidence and grace.</p>
+    <i id="i_background" class="fa fa-facebook" aria-hidden="true"></i>
+    <i id="i_background" class="fa-brands fa-instagram"></i>
+    <i id="i_background" class="fa-brands fa-twitter"></i>
+    <i id="i_background" class="fa-brands fa-tiktok"></i>
+    <i id="i_background" class="fa-brands fa-whatsapp"></i>
+  </div>
+  <div class=" col-lg-3 col-md-6 col-sm-12  pt-4 position-relative ">
+    <h3 class="text-white ">Quick Links</h3>
+    <ol class="p-0">
+      <li ><a href="home.html" style="text-decoration: none; color: rgb(199, 198, 198);">Home</a></li>
+      <li ><a href="about.html" style="text-decoration: none; color: rgb(199, 198, 198);">About As</a></li>
+      <li ><a href="product.html" style="text-decoration: none; color: rgb(199, 198, 198);">Products</a></li>
+       <li ><a href="add_product.html" style="text-decoration: none; color: rgb(199, 198, 198);">Add Products</a></li>
+    </ol>
+  </div>
+  <div class=" col-lg-3 col-md-6 col-sm-12  pt-4 position-relative ">
+    <h3 class="text-white"> Our Services</h3>
+    <ol class="p-0">
+      <li ><a style="text-decoration: none; color: rgb(199, 198, 198);">Dreeses</a></li>
+      <li ><a  style="text-decoration: none; color: rgb(199, 198, 198);">Tops</a></li>
+      <li ><a  style="text-decoration: none; color: rgb(199, 198, 198);">Bottomss</a></li>
+       <li ><a  style="text-decoration: none; color: rgb(199, 198, 198);">Accessories</a></li>
+    </ol>
+  </div>
+  <div class=" col-lg-3 col-md-6 col-sm-12  pt-4 position-relative ">
+    <h3 class="text-white">Newletter</h3>
+    <p>Subscribe to our newletter to get updates on new elegant clothes</p>
+    <form class="d-flex">
+<input type="email" placeholder="Your Email" style="width: 50%;" class="p-2 border-0">
+    <button type="submit" class="rounded-end-circle p-2 border-0 m-0 btn_footer" ><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+  </div>
+</div>
+<br/>
+<hr id="line">
+<div>
+<p class="text-center text-secondary  m-0 pb-2">© 2025 <span id="brand"> Her</span>✨Elegance.All rights reserved</p>
+</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+  AOS.init();
+</script>
+      <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>

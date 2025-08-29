@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*login form*/
+#form_button{
+    background-color: rgb(242, 162, 244);
+}
+.form-control:focus{
+    border: 3px solid rgb(248, 193, 249) !important;
+    box-shadow: 2px 2px 5px 2px rgb(248, 193, 249) !important;
+}
+/*header*/
+#brand{
+    color: rgb(188, 3, 192);
+}
+header{
+    box-shadow: 1px 1px 5px 1px gray;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2000 !important;
+}
+header h1{
+    font-family:monospace;
+}
+header h1:hover{
+transform: scale(1.2);
+}
+.nav-link:hover{
+color: rgb(188, 3, 192) !important;
+}
+.nav-link::after{
+    content: "";
+position: absolute;
+top: 30px;
+left: 0;
+height: 2px;
+width: 0;
+transition:0.5s;
+background-color:rgb(242, 162, 244) ;
+}
+.nav-link:hover::after{
+    width: 90%;
+    transform: scale(1.2);
+}
+/*logout*/
+#logout_button{
+    border: none;
+    background-color:rgb(244, 142, 246) ;
+    padding: 0 10px !important;
+    color:rgb(247, 232, 194);
+}
+#logout_button:hover{
+    background-color:rgb(242, 162, 244) ;
+    transform: scale(1.1);
+}
+/*home*/
+.first{
+background: linear-gradient(to right, rgb(245, 206, 246),rgb(250, 243, 225));
+}
+#imagehero{
+    width: 75%;
+}
+#firstp{
+    color: rgb(91, 90, 90);
+}
+.hero_button{
+    border: none;
+    background-color:rgb(244, 142, 246) ;
+    padding: 10px ; 
+}
+.hero_button:hover{
+    background-color:rgb(246, 130, 248) ;
+    transform: translate(3px,3px);
+    transition: 0.5s;
+}
+.second{
+   background-color: rgb(248, 239, 245); 
+}
+@keyframes secondh2 {
+    form{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(6px);
+    }
+}
+.second_h2{
+    color: rgb(246, 130, 248);
+animation-name: secondh2;
+animation-duration: 1.5s;
+animation-direction: alternate-reverse;
+animation-iteration-count: infinite;
+}
+#customers_images{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#customers_images:hover{
+    border: 5px solid rgb(246, 130, 248);
+}
+.three_div{
+    background-color: rgb(248, 239, 245);
+    padding: 20px;
+}
+footer{
+    background-color: rgb(24, 24, 24);
+}
+.name{
+    color: rgb(78, 1, 69);
+}
+.fourth{
+   
+background: linear-gradient(to bottom,rgb(245, 206, 246),rgb(250, 243, 225)); 
+}
+
+.scroll-container {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 1rem;
+          background: linear-gradient(to bottom,rgb(245, 206, 246),rgb(250, 243, 225)); 
+    }
+    .scroll-container::-webkit-scrollbar {
+      display: none; 
+    }
+    .card {
+      min-width: 220px;
+      scroll-snap-align: start;
+      flex-shrink: 0; 
+    }
+/*About*/
+.about_first{
+    background: linear-gradient(-45deg,rgb(245, 206, 246),rgb(250, 243, 225));
+}
+.image_about{
+    border-radius: 50%;  
+}/*footer*/
+#line{
+    color:grey;
+}
+#i_background{
+    background-color: rgb(58, 58, 58);
+   border-radius: 50%;
+   padding: 3px;
+   width: 30px;
+   height: 30px;
+   font-size: 20px;
+   color: white;
+}
+#i_background:hover{
+    background-color:rgb(188, 3, 192) ;
+}
+ol li{
+    list-style-type:none;
+    position: relative;
+    text-align: start !important;
+}
+footer ol li::after{
+content: " ";
+position: absolute;
+top: 25px;
+left: 0;
+background-color: white;
+width: 0;
+height: 2px;
+transition: 0.5s;
+}
+footer ol li:hover::after{
+    width: 50%;
+}
+footer ol li:hover{
+transform: translate(3px);
+}
+footer h3::after{
+content: " ";
+position: absolute;
+top: 59px;
+left: 15px;
+background-color: rgb(246, 130, 248);
+width: 25%;
+height: 3px;
+transition: 0.5s;
+}
+footer p{
+    color: rgb(199, 198, 198)
+}
+.btn_footer{
+    color:rgb(246, 130, 248) ;
+}
+/*product*/
+.product_page{
+    background: linear-gradient(to top,rgb(245, 206, 246),rgb(250, 243, 225)); 
+}
+.card-body{
+   background-color: rgb(248, 239, 245);   
+}
+.card-img-top{
+    height: 300px;
+    object-fit: contain;
+   background-color: white;
+    transition: 0.5s;
+    transform-origin: center;
+}
+/*zoom for images inside card*/
+.zoom{
+    overflow: hidden;
+}
+.zoom:hover .card-img-top{
+    transform: scale(1.2);
+}
+.btn1{
+    background-color: rgb(244, 142, 246) !important ;
+    padding: 10px;   
+}
+.btn1:hover{
+background-color: rgb(245, 86, 248) !important ;
+transition: 0.3s;
+}
+.btn2{
+    background-color: rgba(247, 213, 126, 1) !important;
+    padding: 10px;
+}
+.btn2:hover{
+     background-color: rgb(251, 206, 93) !important;
+     transition: 0.3s;
+}
+   
